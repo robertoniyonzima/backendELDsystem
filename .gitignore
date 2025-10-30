@@ -1,0 +1,17 @@
+# Fichiers et Dossiers de l'Environnement
+
+# 1. Environnement Virtuel (à ne JAMAIS uploader)
+venv/
+.venv/
+env/
+.env/
+
+# 2. Fichier de Variables Secrètes (à ne JAMAIS uploader)
+.env
+.local.env
+
+# 3. Fichiers de Compilation/Cache Python
+__pycache__/
+*.pyc
+
+

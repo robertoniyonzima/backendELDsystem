@@ -113,21 +113,24 @@ SIMPLE_JWT = {
 }
 
 # ✅ CORS configuration
+VERCEL_FRONTEND_URL = "https://frontend-el-dsystem.vercel.app"
+
 if RENDER_EXTERNAL_HOSTNAME:
+    # --- PRODUCTION ---
     CORS_ALLOWED_ORIGINS = [
         f'https://{RENDER_EXTERNAL_HOSTNAME}',
+        VERCEL_FRONTEND_URL, 
         'http://localhost:3000',
         'http://127.0.0.1:3000',
     ]
     CORS_ALLOW_CREDENTIALS = True
 else:
+    # --- DÉVELOPPEMENT LOCAL ---
     CORS_ALLOWED_ORIGINS = [
-        "https://frontend-el-dsystem.vercel.app",
+        VERCEL_FRONTEND_URL, 
         "http://localhost:3000",
         "http://127.0.0.1:3000",
         "http://localhost:5173",
-        # "http://localhost:39745",
-        # "http://127.0.0.1:39745"
     ]
 
 LANGUAGE_CODE = 'en-us'

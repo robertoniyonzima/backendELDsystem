@@ -168,8 +168,8 @@ DEFAULT_FROM_EMAIL = 'ELD Compliance System <rortonexpensetracker@gmail.com>'
 # Cache Configuration (for verification codes)
 CACHES = {
     'default': {
-        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
-        'LOCATION': 'unique-snowflake',
+        'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
+        'LOCATION': 'django_cache_table', # Nom de la table dans la DB
     }
 }
 # ✅ Security settings for production

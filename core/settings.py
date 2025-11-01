@@ -168,8 +168,8 @@ DEFAULT_FROM_EMAIL = 'ELD Compliance System <rortonexpensetracker@gmail.com>'
 # Cache Configuration (for verification codes)
 CACHES = {
     'default': {
-        'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
-        'LOCATION': 'django_cache_table', # Nom de la table dans la DB
+        'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
+        'LOCATION': '/tmp/django_cache',
     }
 }
 # ✅ Security settings for production
